@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+    }
+  }
+  &:last-child {
+    .page-link {
+
+    }
+  }
+
+  &.active .page-link {
+    z-index: 1;
+
+  }
+
+  &.disabled .page-link {
+    pointer-events: none;
+  }
+}
+
+
+//
+// Sizing
+//
+
+.pagination-lg {
+
+}
+
+.pagination-sm {
+
+}
