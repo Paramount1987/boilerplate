@@ -3,10 +3,26 @@
 block content
 	#preloader
 	#wrapper
+		-
+			var movieList = [
+			{
+			title: "Ocean's Eleven",
+			rating: 9.2
+			}, {
+			title: "Pirates of the Caribbean",
+			rating: 9.7
+			}
+			];
+		mixin movie-card(movie)
+			h2.movie-title= movie.title
+			div.rating
+				p= movie.rating
 		.body-container
 			.container
 				.row
 					.col-sm-12
+						for movie in movieList
+							+movie-card(movie)
 						ul
 							li
 								a(href='components.html') Components
